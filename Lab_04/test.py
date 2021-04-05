@@ -42,14 +42,14 @@ class DeviceManagerTest(unittest.TestCase):
 
         result = self.manager.sort_by_price(devices=expected_device)
 
-        self.assertEqual(result, sorted(expected_device, key=lambda s: s.price))
+        self.assertEqual(result, expected_device)
 
     def test_sort_by_power(self):
         expected_device = [self.fridge, self.kettle, self.knife, self.measuring_cup]
 
         result = self.manager.sort_by_power(devices=expected_device)
 
-        self.assertEqual(result, sorted(expected_device, key=lambda s: s.power))
+        self.assertEqual(result, expected_device)
 
 
 class DeviceTest(unittest.TestCase):
